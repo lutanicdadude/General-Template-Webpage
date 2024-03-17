@@ -1,0 +1,241 @@
+* {
+    font-family: Montserrat, sans-serif;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+#logo {
+    color: white;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+#navbar {
+    z-index: 100;
+    background-color: #333;
+    overflow: hidden;
+    width: 100%;
+}
+
+#navbar > a {
+    color: white;
+    display: inline-block;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+    float: right;
+}
+
+#navbar > a:hover {
+    color: red;
+}
+
+
+#header {
+    background-color: gray;
+
+    height: 890px;
+    text-align: center
+}
+
+#section1 {
+    height: 683px;
+    background-color: black;
+    text-align: center;
+}
+
+#section2 {
+    height: 800px;
+    background-color: aqua;
+    text-align: center;
+}
+
+#section3 {
+    height: 500px;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: space-between;
+}
+
+#section4 {
+    height: 898px;
+    background-color: azure;
+    text-align: center;
+}
+
+#footer {
+    height: 912px;
+    background-color: bisque;
+}
+
+#footer-title,
+#main-nav,
+#contact,
+#copyright {
+    display: inline-block;
+    position: relative;
+
+}
+
+#footer-title {
+    margin-left: 20%;
+}
+
+
+
+#footer-title {
+    line-height: 100px;
+    top: 20%;
+    left: 10%;
+}
+
+#main-nav {
+    top: 24%;
+    left: 13%;
+}
+
+#contact {
+    top: 24%;
+    left: 15%;
+}
+
+#copyright {
+    left: -5%;
+    top: 70%;
+}
+
+
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+    padding-top: 60px;
+  }
+
+.text1,
+.text2,
+.text3,
+.text4,
+.text5,
+.text11 {
+    position: relative;
+    color: white;
+}
+
+.text1 {
+    top: 550px;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.text2 {
+    top: 580px;
+    font-weight: 700;
+    font-size: 90px;
+}
+
+.text3 {
+    top: 70px;
+    font-weight: 600px;
+    color: rgb(36, 204, 205);
+    font-size: 19.2px;
+}
+
+.text4 {
+    font-size: 56px;
+    height: 112px;
+    line-height: 56px;
+    width: 700px;
+    margin: auto auto;
+    top: 100px;
+}
+
+.text5 {
+    font-size: 40px;
+    color: black;
+    top: 50px;
+}
+
+.text6,
+.text7,
+.text8,
+.text9,
+.text10 {
+    border: 1px solid black;
+    width: 100%;
+    border-right: none;
+    text-align: center;
+}
+
+.text11 {
+    top: 70px;
+    color: black;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.options {
+    display: flex;
+}
+
+.text12,
+.text13,
+.text13,
+.text14,
+.text15,
+.text16 {
+    border: 1px solid black;
+    width: 344px;
+    text-align: center;
+    margin-top: 120px;
+    height: 610px;
+    margin-left: 20px;
+}
+
+.text12 {
+    margin-left: 45px;
+}
+
+.text17 {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.text18 {
+    font-size: 44.8px;
+    font-weight: bold;
+}
+
+.navbar-nav,
+.nav-title {
+
+    list-style: none;
+}
+
+.nav-link {
+
+    color: black;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.nav-link:hover {
+    color: red;
+    cursor: pointer;
+}
+
+
+.ig-image {
+    position: relative;
+    display: block;
+}
+
+.copyright {
+    top: 250px;
+}
