@@ -5,20 +5,20 @@
 }
 
 #logo {
-    color: white;
+    color: lightblue;
     margin-top: 10px;
     margin-left: 20px;
 }
 
 #navbar {
     z-index: 100;
-    background-color: #333;
+    transition: 0.6s;
     overflow: hidden;
     width: 100%;
 }
 
 #navbar > a {
-    color: white;
+    color: lightblue;
     display: inline-block;
     text-align: center;
     padding: 14px;
@@ -33,9 +33,9 @@
 
 #header {
     background-color: gray;
-
     height: 890px;
-    text-align: center
+    text-align: center;
+    top: 0;
 }
 
 #section1 {
@@ -111,12 +111,35 @@
     position: fixed;
     top: 0;
     width: 100%;
+    background-color: #333;
 }
 
 /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
-.sticky + .content {
+.sticky + #navbar {
     padding-top: 60px;
   }
+
+.background-clip {
+    position: relative;
+    min-height: 100vh;
+    background-size: cover;
+    top: 0;
+
+}
+
+@media (min-aspect-ratio:16/9) {
+    .background-clip {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-aspect-ratio:16/9) {
+    .background-clip{
+        width: auto;
+        height: 100%;
+    }
+}
 
 .text1,
 .text2,
