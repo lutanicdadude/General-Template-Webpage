@@ -4,6 +4,8 @@
     scroll-behavior: smooth;
 }
 
+
+
 #logo {
     color: lightblue;
     margin-top: 10px;
@@ -32,7 +34,6 @@
 
 
 #header {
-    background-color: gray;
     height: 890px;
     text-align: center;
     top: 0;
@@ -112,6 +113,7 @@
     top: 0;
     width: 100%;
     background-color: #333;
+    z-index: 100;
 }
 
 /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
@@ -120,11 +122,10 @@
   }
 
 .background-clip {
-    position: relative;
-    min-height: 100vh;
-    background-size: cover;
-    top: 0;
-
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
 }
 
 @media (min-aspect-ratio:16/9) {
@@ -152,15 +153,75 @@
 }
 
 .text1 {
-    top: 550px;
+    display: block;
+    top: 50%;
     font-weight: bold;
     font-size: 40px;
+    z-index: 1;
 }
 
 .text2 {
-    top: 580px;
+    top: 70%;
     font-weight: 700;
     font-size: 90px;
+    z-index: 1;
+}
+
+.down {
+    position: relative;
+    top: 64%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    border: 2px solid #00567d;
+    background: #04a9f5;
+    box-shadow: 0 0 0 5px #fff, 0 5px 25px rgba(0,0,0,0.8);
+    overflow: hidden;
+    display: inline-block;
+}
+
+.down:before {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background: rgba(0,0,0,0.1);
+}
+
+.down .fa {
+    font-size: 60px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    transform: translate(-50%,-50%);
+    animation: animate 1.5s linear infinite;
+    text-shadow: 0 2px 5px rgba(0,0,0,2);
+}
+
+@keyframes animate {
+    0% {
+        top: -10%;
+    }
+
+    40% {
+        top: 60%;
+    }
+
+    60% {
+        top: 30%;
+    }
+
+    80% {
+        top: 60%;
+    }
+
+    100% {
+        top: 110%;
+    }
 }
 
 .text3 {
