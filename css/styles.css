@@ -87,7 +87,7 @@
 }
 
 #footer {
-    height: 700px;
+    height: 600px;
     background-color: bisque;
 }
 
@@ -97,32 +97,34 @@
 }
 
 #footer-title {
+    display: inline-block;
     line-height: 100px;
-
+    top: 20%;
+    left: 25%;
 }
 
 #information {
     position: relative;
-    top: 30%;
+    top: 5%;
     display: flex;
     justify-content: center;
     text-align: center;
-    height: 250px;
 }
 
 #main-nav {
-    margin-top: 100px;
+    display: inline-block;
+    margin-top: 0px;
 }
 
 #contact {
-    margin-top: 100px;
-    margin-left: 50px;
+    display: inline-block;
+    margin-top: 0px;
+    margin-left: 2%;
 }
 
 #copyright {
     left: auto;
-    top: auto;
-    top: 350px;
+    margin-top: 15%;
     display: block;
     text-align: center;
 }
@@ -375,4 +377,25 @@
 .ig-image {
     position: relative;
     display: block;
+}
+
+@media (max-width: 768px) {
+    #footer-title {
+        display: relative;
+        top: 20%;
+        left: 20%;
+    }
+    
+    #contact {
+        margin-left: 10%;
+    }
+
+    #information {
+        top: 25%;
+        left: 0;
+    }
+
+    #copyright {
+        margin-top: 30%;
+    }
 }
