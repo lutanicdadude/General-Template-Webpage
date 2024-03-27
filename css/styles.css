@@ -2,9 +2,20 @@
     font-family: Montserrat, sans-serif;
     margin: 0;
     scroll-behavior: smooth;
+    width: auto;
 }
 
+::-webkit-scrollbar {
+    width: 1vw;
+}
 
+::-webkit-scrollbar-thumb {
+    background: hsl(0, 0%, 23%);
+}
+
+::-webkit-scrollbar-track {
+    background: hsl(0, 0%, 13%);
+}
 
 #logo {
     color: lightblue;
@@ -34,21 +45,29 @@
 
 
 #header {
-    height: 890px;
+    height: 700px;
     text-align: center;
     top: 0;
+    max-width: 100%;
 }
 
 #section1 {
-    height: 683px;
+    top: 0;
+    min-height: 683px;
     background-color: black;
     text-align: center;
 }
 
 #section2 {
-    height: 800px;
-    background-color: aqua;
+    height: 100vh;
     text-align: center;
+    perspective: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    z-index: -1;   
 }
 
 #section3 {
@@ -60,49 +79,52 @@
 
 #section4 {
     height: 898px;
-    background-color: azure;
+    background-image:
+        linear-gradient(
+            to top right, #8B5Cf6, #EC4899
+        );
     text-align: center;
 }
 
 #footer {
-    height: 912px;
+    height: 700px;
     background-color: bisque;
 }
 
 #footer-title,
-#main-nav,
-#contact,
 #copyright {
-    display: inline-block;
     position: relative;
-
 }
-
-#footer-title {
-    margin-left: 20%;
-}
-
-
 
 #footer-title {
     line-height: 100px;
-    top: 20%;
-    left: 10%;
+
+}
+
+#information {
+    position: relative;
+    top: 30%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    height: 250px;
 }
 
 #main-nav {
-    top: 24%;
-    left: 13%;
+    margin-top: 100px;
 }
 
 #contact {
-    top: 24%;
-    left: 15%;
+    margin-top: 100px;
+    margin-left: 50px;
 }
 
 #copyright {
-    left: -5%;
-    top: 70%;
+    left: auto;
+    top: auto;
+    top: 350px;
+    display: block;
+    text-align: center;
 }
 
 
@@ -146,7 +168,6 @@
 .text2,
 .text3,
 .text4,
-.text5,
 .text11 {
     position: relative;
     color: white;
@@ -161,7 +182,8 @@
 }
 
 .text2 {
-    top: 70%;
+    display: block;
+    top: 60%;
     font-weight: 700;
     font-size: 90px;
     z-index: 1;
@@ -169,7 +191,7 @@
 
 .down {
     position: relative;
-    top: 64%;
+    top: 53%;
     left: 40%;
     transform: translate(-50%, -50%);
     width: 60px;
@@ -240,10 +262,26 @@
     top: 100px;
 }
 
+.background,
+.foreground {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.background {
+    transform: translateZ(-10px) scale(2);
+}
+
+.foreground {
+    transform: translateZ(-5px) scale(1.5);
+}
+
 .text5 {
     font-size: 40px;
     color: black;
-    top: 50px;
+    
 }
 
 .text6,
@@ -258,10 +296,15 @@
 }
 
 .text11 {
+    font-family: 'Luckiest Guy', cursive;
     top: 70px;
-    color: black;
-    font-size: 40px;
+    color: transparent;
+    font-size: 90px;
     font-weight: bold;
+    background-image: url(https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    background-clip: text;
+
 }
 
 .options {
@@ -274,12 +317,12 @@
 .text14,
 .text15,
 .text16 {
-    border: 1px solid black;
+    /* border: 1px solid black;
     width: 344px;
     text-align: center;
     margin-top: 120px;
     height: 610px;
-    margin-left: 20px;
+    margin-left: 20px; */
 }
 
 .text12 {
@@ -318,8 +361,4 @@
 .ig-image {
     position: relative;
     display: block;
-}
-
-.copyright {
-    top: 250px;
 }
